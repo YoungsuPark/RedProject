@@ -8,7 +8,13 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	
+	<!-- Controller Setting -->
+	<context:component-scan base-package="net.javap.red" />
+	<mvc:annotation-driven />
 
+	<!-- View Setting -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/"
+		p:suffix=".jsp" />
 
 </beans>
